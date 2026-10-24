@@ -12,22 +12,20 @@ h1, h2, h3, .title-font {
 
 /* Transiciones entre ventanas */
 .step-container {
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    opacity: 0;
-    transform: translateY(20px);
-    pointer-events: none;
-    position: absolute;
-    inset: 0;
-    display: flex;
+    display: none; /* Fuerza a ocultar las ventanas inactivas */
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .step-container.active {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+    display: flex; /* Solo muestra la ventana activa */
+    animation: aparecer 1s ease-in-out forwards;
     z-index: 10;
 }
 
