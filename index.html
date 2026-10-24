@@ -3,33 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Ti</title>
+    <title>Para Ti...</title>
+    <!-- Tailwind CSS (diseño visual nuevo) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuentes elegantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Fondo animado -->
+<body class="relative w-screen h-screen">
+
+    <!-- Fondo de estrellas animado (el nuestro) -->
     <div class="noche">
         <div class="estrellas"></div>
         <div class="estrellas2"></div>
         <div class="estrellas3"></div>
     </div>
-    <div id="seccionAcertijo" class="contenedor">
-        <h2>Solo una pregunta...</h2>
-        <p>Si pudieras detener el tiempo en un solo recuerdo, ¿cuál sería?</p>
-        <textarea id="respuestaInput" placeholder="Escribe tu respuesta aquí..."></textarea>
-        <button onclick="enviarRespuesta()">Enviar</button>
+
+    <!-- PASO 1: Inicio -->
+    <div id="step1" class="step-container active p-6 text-center z-10">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-200 title-font tracking-wide">
+            Hola...
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 max-w-md mx-auto mb-10 leading-relaxed italic">
+            "A veces las palabras no alcanzan, así que preparé algo especial solo para ti."
+        </p>
+        <button onclick="irPaso2()" class="btn-romantic text-white px-10 py-4 rounded-full text-lg tracking-wider title-font">
+            Descubrir
+        </button>
     </div>
 
-    <div id="seccionMensaje" class="contenedor" style="display: none;">
-        <h2>Porque todo de mí, ama todo de ti</h2>
-        <p>Tu respuesta fue perfecta. Eres exactamente lo que estaba buscando, incluso a la distancia.</p>
+    <!-- PASO 2: Pregunta -->
+    <div id="step2" class="step-container p-6 text-center z-10">
+        <h2 class="text-3xl md:text-4xl mb-8 title-font font-semibold text-red-200">
+            Una pregunta antes de continuar...
+        </h2>
+        <p class="text-base md:text-lg text-gray-300 max-w-lg mx-auto mb-8 leading-relaxed">
+            Aunque la distancia física nos separe por ahora, siento que estamos más conectados que nunca. <br><br>
+            <strong>¿Qué es eso que hace que todo este tiempo y distancia valgan la pena para ti?</strong>
+        </p>
+        
+        <div class="w-full max-w-lg mx-auto relative">
+            <textarea id="respuestaInput" rows="4" class="w-full rounded-2xl p-4 text-base md:text-lg resize-none mb-6 transition-all" placeholder="Escribe lo que sientes aquí..."></textarea>
+        </div>
+
+        <button onclick="enviarRespuesta()" id="btnEnviar" class="btn-romantic text-white px-10 py-4 rounded-full text-lg tracking-wider title-font flex items-center justify-center gap-3 mt-4 mx-auto">
+            <span>Enviar</span>
+        </button>
     </div>
 
+    <!-- PASO 3: Mensaje Final -->
+    <div id="step3" class="step-container p-6 text-center z-10">
+        <div class="max-w-2xl mx-auto backdrop-blur-md bg-black/20 p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
+            <h1 class="text-4xl md:text-5xl mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-200 title-font">
+                Te entrego todo de mí
+            </h1>
+            <div class="space-y-6 text-lg md:text-xl text-gray-200 leading-relaxed">
+                <p>
+                    Gracias por tu respuesta. La guardaré siempre.
+                </p>
+                <p>
+                    Quería hacer esto porque necesito que sepas algo: la distancia es solo un detalle temporal cuando la entrega es total.
+                </p>
+                <p class="italic text-red-100 font-medium">
+                    "Porque amo cada parte de ti. Tus perfectas imperfecciones."
+                </p>
+                <p>
+                    Estoy dispuesto a esperar y a construir esto contigo, paso a paso, porque sé que lo que tenemos es real. Tienes mi corazón, sin prisas, sin presiones, pero con la certeza absoluta de que vales cada kilómetro.
+                </p>
+            </div>
+            
+            <div class="mt-10 opacity-70">
+                <svg class="w-12 h-12 mx-auto text-red-500 animate-pulse" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Música -->
     <audio id="cancionFondo" loop>
         <source src="cancion.mp3" type="audio/mpeg">
     </audio>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+    <!-- Base de Datos (Nuestro sistema) -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,57 +1,74 @@
 body {
-    background-color: #0b132b;
-    color: #ffffff;
-    font-family: 'Georgia', serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #0B1021; /* Azul profundo del nuevo código */
+    color: #F8F9FA;
+    font-family: 'Lora', serif;
+    overflow: hidden; 
     margin: 0;
-    text-align: center;
 }
-.contenedor {
-    background: rgba(28, 37, 65, 0.8);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    max-width: 400px;
-    width: 90%;
+
+h1, h2, h3, .title-font {
+    font-family: 'Playfair Display', serif;
 }
-textarea {
-    width: 100%;
-    height: 80px;
-    margin: 20px 0;
-    padding: 10px;
-    border-radius: 8px;
+
+/* Transiciones entre ventanas */
+.step-container {
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-container.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    z-index: 10;
+}
+
+/* Botón Romántico y Textarea */
+.btn-romantic {
+    background: linear-gradient(135deg, #8B0000, #4A0000);
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
+    transition: all 0.3s ease;
     border: none;
-    resize: none;
-    font-family: sans-serif;
-}
-button {
-    background-color: #3a506b;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 16px;
-    border-radius: 25px;
     cursor: pointer;
-    transition: 0.3s;
 }
-button:hover {
-    background-color: #5bc0be;
+
+.btn-romantic:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 0, 0, 0.6);
 }
-/* --- Animación del Fondo de Estrellas --- */
+
+textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: white;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #8B0000;
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.3);
+}
+
+/* --- Animación de Estrellas --- */
 .noche {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Para que quede detrás de las ventanas */
+    z-index: -1; 
     overflow: hidden;
 }
 
-/* Generamos estrellas pequeñas, medianas y grandes con sombras CSS */
 .estrellas {
     width: 1px;
     height: 1px;
@@ -104,10 +121,6 @@ button:hover {
 }
 
 @keyframes animarEstrellas {
-    from {
-        transform: translateY(0px);
-    }
-    to {
-        transform: translateY(-2000px);
-    }
+    from { transform: translateY(0px); }
+    to { transform: translateY(-2000px); }
 }
