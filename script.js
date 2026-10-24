@@ -51,7 +51,7 @@ function enviarRespuesta() {
     } else {
         alert("Por favor, escribe algo antes de continuar.");
     }
-} // <-- Esta es la llave que faltaba para cerrar la función
+}
 
 /* --- SISTEMA DE LETRAS Y REPRODUCTOR --- */
 
@@ -71,59 +71,50 @@ const letrasSincronizadas = [
     { tiempo: 51, texto: "Tú estás loca y yo estoy fuera de mí" },
     { tiempo: 55, texto: "Porque todo de mí" },
     { tiempo: 59, texto: "Ama todo de ti" },
-    // Continúa reemplazando el resto de las líneas aquí abajo...
-    { tiempo: 63, texto: "[Pega aquí: Amo tus curvas...]" },
-    { tiempo: 66, texto: "[Pega aquí: Todas tus perfectas...]" },
-    { tiempo: 70, texto: "[Pega aquí: Dame todo de ti a mí]" },
-    { tiempo: 74, texto: "[Pega aquí: Te daré todo de mí a ti]" },
-    { tiempo: 79, texto: "[Pega aquí: Eres mi final...]" },
-    { tiempo: 83, texto: "[Pega aquí: Incluso cuando pierdo...]" },
-    { tiempo: 87, texto: "[Pega aquí: Porque yo te doy...]" },
-    { tiempo: 93, texto: "[Pega aquí: Y tú me das todo de ti, oh-oh]" },
-    
-    // Verso 2
-    { tiempo: 100, texto: "[Pega aquí: ¿Cuántas veces tengo que decirte?]" },
-    { tiempo: 105, texto: "[Pega aquí: Incluso cuando lloras...]" },
-    { tiempo: 108, texto: "[Pega aquí: El mundo te está castigando...]" },
-    { tiempo: 113, texto: "[Pega aquí: Eres mi ruina...]" },
-    { tiempo: 117, texto: "[Pega aquí: Mi peor distracción...]" },
-    { tiempo: 121, texto: "[Pega aquí: No puedo dejar de cantar...]" },
-    { tiempo: 124, texto: "[Pega aquí: En mi mente para ti]" },
-    
-    // Coro 2
-    { tiempo: 128, texto: "[Pega aquí: Mi cabeza está bajo el agua]" },
-    { tiempo: 131, texto: "[Pega aquí: Pero respiro sin problema]" },
-    { tiempo: 134, texto: "[Pega aquí: Tú estás loca...]" },
-    { tiempo: 139, texto: "[Pega aquí: Porque todo de mí]" },
-    { tiempo: 143, texto: "[Pega aquí: Ama todo de ti]" },
-    { tiempo: 147, texto: "[Pega aquí: Amo tus curvas...]" },
-    { tiempo: 150, texto: "[Pega aquí: Todas tus perfectas...]" },
-    { tiempo: 154, texto: "[Pega aquí: Dame todo de ti a mí]" },
-    { tiempo: 158, texto: "[Pega aquí: Te daré todo de mí a ti]" },
-    { tiempo: 163, texto: "[Pega aquí: Eres mi final...]" },
-    { tiempo: 167, texto: "[Pega aquí: Incluso cuando pierdo...]" },
-    { tiempo: 171, texto: "[Pega aquí: Porque yo te doy...]" },
-    { tiempo: 177, texto: "[Pega aquí: Y tú me das todo de ti, oh-oh]" },
-    { tiempo: 181, texto: "[Pega aquí: Dame todo de ti, oh]" },
-    
-    // Puente
-    { tiempo: 186, texto: "[Pega aquí: Cartas sobre la mesa]" },
-    { tiempo: 190, texto: "[Pega aquí: Los dos estamos mostrando corazones]" },
-    { tiempo: 195, texto: "[Pega aquí: Arriesgándolo todo...]" },
-    
-    // Coro Final
-    { tiempo: 199, texto: "[Pega aquí: Porque todo de mí]" },
-    { tiempo: 203, texto: "[Pega aquí: Ama todo de ti]" },
-    { tiempo: 206, texto: "[Pega aquí: Amo tus curvas...]" },
-    { tiempo: 210, texto: "[Pega aquí: Todas tus perfectas...]" },
-    { tiempo: 214, texto: "[Pega aquí: Dame todo de ti a mí]" },
-    { tiempo: 219, texto: "[Pega aquí: Te daré todo de mí a ti]" },
-    { tiempo: 223, texto: "[Pega aquí: Eres mi final...]" },
-    { tiempo: 227, texto: "[Pega aquí: Incluso cuando pierdo...]" },
-    { tiempo: 233, texto: "[Pega aquí: Porque yo te doy...]" },
-    { tiempo: 240, texto: "[Pega aquí: Y tú me das todo de ti]" },
-    { tiempo: 245, texto: "[Pega aquí: Yo te doy todo de mí]" },
-    { tiempo: 250, texto: "[Pega aquí: Y tú me das todo de ti, oh]" },
+    { tiempo: 63, texto: "Amo tus curvas y todos tus contornos" },
+    { tiempo: 66, texto: "Todas tus perfectas imperfecciones" },
+    { tiempo: 70, texto: "Dame todo de ti a mí" },
+    { tiempo: 74, texto: "Te daré todo de mí a ti" },
+    { tiempo: 79, texto: "Eres mi final y mi comienzo" },
+    { tiempo: 83, texto: "Incluso cuando pierdo, salgo ganando" },
+    { tiempo: 87, texto: "Porque yo te doy todo de mí" },
+    { tiempo: 93, texto: "Y tú me das todo de ti, oh-oh" },
+    { tiempo: 100, texto: "¿Cuántas veces tengo que decirte?" },
+    { tiempo: 105, texto: "Incluso cuando lloras, eres hermosa" },
+    { tiempo: 108, texto: "El mundo te está castigando, yo te sigo en cada momento" },
+    { tiempo: 113, texto: "Eres mi ruina, eres mi musa" },
+    { tiempo: 117, texto: "Mi peor distracción, mi ritmo y melodía" },
+    { tiempo: 121, texto: "No puedo dejar de cantar, está sonando" },
+    { tiempo: 124, texto: "En mi mente para ti" },
+    { tiempo: 128, texto: "Mi cabeza está bajo el agua" },
+    { tiempo: 131, texto: "Pero respiro sin problema" },
+    { tiempo: 134, texto: "Tú estás loca y yo estoy fuera de mí" },
+    { tiempo: 139, texto: "Porque todo de mí" },
+    { tiempo: 143, texto: "Ama todo de ti" },
+    { tiempo: 147, texto: "Amo tus curvas y todos tus contornos" },
+    { tiempo: 150, texto: "Todas tus perfectas imperfecciones" },
+    { tiempo: 154, texto: "Dame todo de ti a mí" },
+    { tiempo: 158, texto: "Te daré todo de mí a ti" },
+    { tiempo: 163, texto: "Eres mi final y mi comienzo" },
+    { tiempo: 167, texto: "Incluso cuando pierdo, salgo ganando" },
+    { tiempo: 171, texto: "Porque yo te doy todo de mí" },
+    { tiempo: 177, texto: "Y tú me das todo de ti, oh-oh" },
+    { tiempo: 181, texto: "Dame todo de ti, oh" },
+    { tiempo: 186, texto: "Cartas sobre la mesa" },
+    { tiempo: 190, texto: "Los dos estamos mostrando corazones" },
+    { tiempo: 195, texto: "Arriesgándolo todo, aunque sea difícil" },
+    { tiempo: 199, texto: "Porque todo de mí" },
+    { tiempo: 203, texto: "Ama todo de ti" },
+    { tiempo: 206, texto: "Amo tus curvas y todos tus contornos" },
+    { tiempo: 210, texto: "Todas tus perfectas imperfecciones" },
+    { tiempo: 214, texto: "Dame todo de ti a mí" },
+    { tiempo: 219, texto: "Te daré todo de mí a ti" },
+    { tiempo: 223, texto: "Eres mi final y mi comienzo" },
+    { tiempo: 227, texto: "Incluso cuando pierdo, salgo ganando" },
+    { tiempo: 233, texto: "Porque yo te doy todo de mí" },
+    { tiempo: 240, texto: "Y tú me das todo de ti" },
+    { tiempo: 245, texto: "Yo te doy todo de mí" },
+    { tiempo: 250, texto: "Y tú me das todo de ti, oh" },
     { tiempo: 258, texto: "🎶 (Música final) 🎶" }
 ];
 
