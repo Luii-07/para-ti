@@ -81,6 +81,25 @@
     </div>
 
     <!-- Música -->
+     <!-- Contenedor de Letras y Reproductor (Oculto hasta el paso 3) -->
+    <div id="contenedorMusica" class="fixed bottom-0 left-0 w-full p-6 flex flex-col items-center justify-center opacity-0 transition-opacity duration-1000 pointer-events-none z-50">
+        
+        <!-- Letras sincronizadas -->
+        <div id="letras" class="text-xl md:text-2xl text-center font-serif italic text-red-200 mb-4 h-16 drop-shadow-lg transition-opacity duration-500 opacity-0">
+            🎶 (Música) 🎶
+        </div>
+        
+        <!-- Mini Reproductor -->
+        <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-6 py-2 flex items-center justify-center gap-4 pointer-events-auto shadow-xl">
+            <button onclick="pausarReproducir()" class="text-white hover:text-red-400 transition transform hover:scale-110">
+                <!-- Ícono de Pausa -->
+                <svg id="iconoPause" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                <!-- Ícono de Play -->
+                <svg id="iconoPlay" class="w-8 h-8 hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+        </div>
+        
+    </div>
     <audio id="cancionFondo" loop>
         <source src="cancion.mp3" type="audio/mpeg">
     </audio>
