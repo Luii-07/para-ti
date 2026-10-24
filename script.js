@@ -51,7 +51,9 @@ function enviarRespuesta() {
     } else {
         alert("Por favor, escribe algo antes de continuar.");
     }
-    /* --- SISTEMA DE LETRAS Y REPRODUCTOR --- */
+} // <-- Esta es la llave que faltaba para cerrar la función
+
+/* --- SISTEMA DE LETRAS Y REPRODUCTOR --- */
 
 // Tiempos en segundos y traducción de "All of Me"
 const letrasSincronizadas = [
@@ -60,15 +62,16 @@ const letrasSincronizadas = [
     { tiempo: 19, texto: "Atrayéndome y echándome" },
     { tiempo: 23, texto: "Mi cabeza está dando vueltas, no es broma" },
     { tiempo: 27, texto: "No logro descifrarte" },
-    { tiempo: 30, texto: "[Pega aquí: ¿Qué pasa por esa mente hermosa?]" },
-    { tiempo: 34, texto: "[Pega aquí: Estoy en tu viaje mágico y misterioso]" },
-    { tiempo: 37, texto: "[Pega aquí: Y me siento tan mareado...]" },
-    { tiempo: 41, texto: "[Pega aquí: Pero estaré bien]" },
-    { tiempo: 44, texto: "[Pega aquí: Mi cabeza está bajo el agua]" },
-    { tiempo: 48, texto: "[Pega aquí: Pero respiro sin problema]" },
-    { tiempo: 51, texto: "[Pega aquí: Tú estás loca y yo estoy fuera de mí]" },
-    { tiempo: 55, texto: "[Pega aquí: Porque todo de mí]" },
-    { tiempo: 59, texto: "[Pega aquí: Ama todo de ti]" },
+    { tiempo: 30, texto: "¿Qué pasa por esa mente hermosa?" },
+    { tiempo: 34, texto: "Estoy en tu viaje mágico y misterioso" },
+    { tiempo: 37, texto: "Y me siento tan mareado, no sé qué me dio" },
+    { tiempo: 41, texto: "Pero estaré bien" },
+    { tiempo: 44, texto: "Mi cabeza está bajo el agua" },
+    { tiempo: 48, texto: "Pero respiro sin problema" },
+    { tiempo: 51, texto: "Tú estás loca y yo estoy fuera de mí" },
+    { tiempo: 55, texto: "Porque todo de mí" },
+    { tiempo: 59, texto: "Ama todo de ti" },
+    // Continúa reemplazando el resto de las líneas aquí abajo...
     { tiempo: 63, texto: "[Pega aquí: Amo tus curvas...]" },
     { tiempo: 66, texto: "[Pega aquí: Todas tus perfectas...]" },
     { tiempo: 70, texto: "[Pega aquí: Dame todo de ti a mí]" },
